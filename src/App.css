@@ -27,14 +27,14 @@
 .App-link {
   color: #61dafb;
 }
-.colorBox {
+/* .colorBox {
   background-color: red;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex: 1;
-}
+  flex: 1; */
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

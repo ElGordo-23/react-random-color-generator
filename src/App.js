@@ -1,21 +1,19 @@
 import './App.css';
-import React from 'react';
+import randomColor from 'randomcolor';
+import React, { useState } from 'react';
 
-export default App;
-function App() {
-  const randomHexColor = Math.floor(Math.random() * 16777215).toString(16);
-  function refreshPage() {
-    window.location.reload(false);
-  }
+export default function App() {
+  const [color, setColor] = useState(randomColor());
 
-  console.log(randomHexColor);
+  console.log(color);
+
   return (
     <div className="App">
       <h1 style={{}}> Le Random Color Generator</h1>
       <div
         className="colorBox"
         style={{
-          backgroundColor: `#${randomHexColor}`,
+          backgroundColor: color,
           height: 300,
           width: 300,
           display: 'flex',
@@ -32,8 +30,10 @@ function App() {
       <br />
       <br />
       <br />
-      <div>#{randomHexColor}</div>
-      <button onClick={refreshPage}>Generate!</button>
+      <div>{randomColor()}</div>
+      <button onClick={() => setColor(randomColor.randomColor())}>
+        Generate!
+      </button>
     </div>
   );
 }
