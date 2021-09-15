@@ -54,7 +54,7 @@ export default function App() {
             fontStyle: 'italic',
             fontWeight: 'bold',
           }}
-          onClick={() => setColor(randomColor.randomColor())}
+          onClick={() => setColor(randomColor())}
         >
           Generate!
         </button>
